@@ -1,0 +1,30 @@
+# Use a different kali-linux base image for testing
+FROM lscr.io/linuxserver/kali-linux:latest
+
+# Sets the Debian conmfiguration frontend to a non-interactive mode so it doesn't ask questions during package installation or configuration and accepts default answers for all prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Become root to install packages \ use this instead of sudo when installing packages
+USER root
+
+# Install packages to meet requirements
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      wireshark iputils-ping traceroute dnsutils nmap snort && \
+      cp -r /usr/lib/nmap /opt/nmap && \
+      chmod +x /opt/nmap/nmap && \
+      rm /usr/bin/nmap && \
+      printf '#!/bin/sh\nexec /opt/nmap/nmap "$@"' > /usr/bin/nmap && \
+      chmod +x /usr/bin/nmap \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y docker-ce-cli
+
+# Ping requires capabilities in K8s
+RUN setcap cap_net_raw+p /usr/bin/ping
+
+# Copy lab content files to the default user's desktop
+COPY Content/ /config/Desktop/Content/
+
+# Expose the necessary port 
+EXPOSE 3000

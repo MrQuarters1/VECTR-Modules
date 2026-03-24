@@ -1,0 +1,37 @@
+services:
+  dind:
+    image: docker:dind
+    privileged: true
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - dind-certs:/certs/client
+      - dind-data:/var/lib/docker 
+    networks:
+      lab-network:
+        aliases:
+          - docker
+  kali-instruction:
+    image: kali-build-test:latest
+    pull_policy: never
+    depends_on:
+      - dind
+    ports:
+      - "3000:3000"
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_TLS_VERIFY=2
+      - DOCKER_CERT_PATH=/certs/client
+    volumes:
+      - dind-certs:/certs/client:ro
+    networks:
+      - lab-network
+    command: tail -f /dev/null
+
+networks:
+  lab-network:
+    driver: bridge
+
+volumes:
+  dind-certs:
+  dind-data:
