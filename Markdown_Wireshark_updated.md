@@ -35,6 +35,7 @@ Now that we have become familiar with the look of wireshark lets use some of the
 - Above where the packets are displayed there is a text box where packet filters can be input. input the filter by typing "http" in the text box.
     - *how many http packets are there?* 4
 <br>
+
 - filters can be more specific by typing && after the filter. try it with the filter tcp&&frame.len==1434
     - *How many packets are displayed with these filters?* 13
 
