@@ -58,21 +58,6 @@ Wireshark will give information about each packet allowing us to do analysis of 
 ## Finished!
 
 
-
-
-describe the conversations tab and what that can do mayeb ask a question on how many conversations there are.
-
-tell how in the bottom right is shows how many packets are captured and how many are displayed with filters applied
-
-tell them to click on an http packet and see what browser was used.
-
-right click a packet and use the follow option to see the information sent in those packets.
-
-what do the colors mean? go into view menu then coloring rules and looks at all the colors. ask question about what color a specific one is
-
-go to preferences and add a new colum. so preferences, appreances, collum, thne click the plus and put the name such as delta time, then click on the type and choose delta time. it can be dragged in that menu into the position needed. ask what the delta time of a specific packet is.
-
-
 ## Learning Objectives
 
 - Become familiar with **WireShark** Functionality.
