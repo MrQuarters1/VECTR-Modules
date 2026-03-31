@@ -1,8 +1,9 @@
-﻿---
+---
 title: "Modernization with nftables"
 id: "modernization-with-nftables"
-Author: "Toby Knudsen"
-Date: "3/30/2026"
+author: "Toby Knudsen"
+date: "2026-03-30"
+version: 1.0
 ---
 
 ## Background Objectives
