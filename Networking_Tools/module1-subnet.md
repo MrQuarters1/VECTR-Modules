@@ -26,7 +26,7 @@ ip addr
 
 - This command shows your network interface and IP address.
 
-Question:
+## Reflection Questions:
 
 - What is the IP address of your Kali machine?
 
@@ -41,7 +41,7 @@ ping 192.168.94.129
 ```
 * This checks if Kali can communicate with the Windows machine.
 
-Question
+## Reflection Questions:
 
 - Was the ping successful?
 
@@ -55,7 +55,7 @@ ping 192.168.94.128
 ```
 - This tests communication from Windows to Kali.
 
-Question
+## Reflection Questions:
 
 - Can both systems communicate with each other?
 
@@ -71,7 +71,7 @@ Question
 
 This blocks ping requests.
 
-### Question
+## Reflection Questions:
 - What happens when ICMP traffic is blocked?
 
 ---
@@ -85,7 +85,7 @@ ping 192.168.94.129
 ```
 - This tests connectivity after applying firewall restrictions.
 
-Question
+## Reflection Questions:
 
 - What happens after blocking ICMP traffic?
 
@@ -97,14 +97,14 @@ After blocking the firewall rule, ping should fail and show **100% packet loss**
 
 This demonstrates how communication between systems can be restricted.
 
-### Question
+## Reflection Questions:
 - How does blocking traffic **improve** network security?
 
 ---
 
 ## Learning Objectives
 
-- Understand basic network segmentation using subnets  
+- Understand basic network segmentation using subnets.
 - Identify IP addresses using `ip addr`  
 - Test connectivity using `ping`  
 - Demonstrate how firewall rules control communication 
