@@ -3,94 +3,167 @@ title: "Modernization with nftables"
 id: "modernization-with-nftables"
 author: "Toby Knudsen"
 date: "2026-03-30"
-version: 1.0
+version: "1.3"
 ---
 
-## Background Objectives
-nftables is the newer version of firewall management in Linux and is meant to replace iptables. It allows you to create and manage firewall rules in a more organized way. In this lab, we will go through basic commands to view rules, create a simple ruleset, and understand how traffic is allowed or blocked.
+## Learning Objectives
+- Understand how **nftables** modernizes Linux firewall management
+- View and interpret an nftables ruleset
+- Create tables, chains, and rules
+- Test and verify allowed and blocked traffic
 
-## Step 1: Install nftables
-First we need to make sure nftables is installed.
+## Prerequisites
+- none
+
+
+## Lab Environment Setup
+Kali Base
+```bash
+RUN sudo apt-get update -y
+RUN sudo apt-get install nftables -y
+RUN sudo apt-get install iputils-ping -y
+RUN sudo apt-get install net-tools -y
+```
+
+## Background Objectives
+nftables is the modern replacement for iptables in Linux systems. Instead of using multiple tools and formats, nftables combines everything into a single framework that uses tables, chains, and rules. This makes firewall management more consistent and easier to understand. In this lab, you will build a basic ruleset from scratch and test how traffic is handled.
+
+## Step 1: Verify nftables Installation
+Before starting, confirm nftables is installed.
 
 - In a terminal:
+```bash
+nft --version
+```
+
+- If it is not installed:
+```bash
 sudo apt-get update
 sudo apt-get install nftables -y
+```
 
-- Check that it installed correctly:
-nft --version
-
-## Step 2: View Current Rules
-Before making changes, we want to see what rules already exist.
+## Step 2: View Current Ruleset
+Check if any rules already exist.
 
 - Run:
+```bash
 sudo nft list ruleset
+```
 
 - Is there an existing ruleset? (Yes/No)
 
 <br>
 
 ## Step 3: Create a Table
-nftables uses tables to organize rules.
+Tables are used to organize firewall rules.
 
 - Run:
+```bash
 sudo nft add table inet filter
+```
 
-- This creates a table called filter.
+- This creates a table named "filter" that works for IPv4 and IPv6.
 
-- What table did you just create? filter
+- What table did you create? filter
 
 <br>
 
 ## Step 4: Create a Chain
-Chains define how traffic is handled.
+Chains control how packets are processed.
 
 - Run:
-sudo nft add chain inet filter input { type filter hook input priority 0; policy drop; }
+```bash
+sudo nft add chain inet filter input { type filter hook input priority 0 \; policy drop \; }
+```
 
-- This creates an input chain that drops traffic by default.
+- This creates an input chain with a default policy of dropping traffic.
 
-- What is the default policy set to? drop
+- What is the default policy? drop
 
 <br>
 
-## Step 5: Add Basic Rules
-Now we will allow certain types of traffic.
+## Step 5: Add Firewall Rules
+Now we will allow specific types of traffic.
 
 - Allow loopback traffic:
+```bash
 sudo nft add rule inet filter input iif lo accept
+```
 
 - Allow established connections:
+```bash
 sudo nft add rule inet filter input ct state established,related accept
+```
 
-- Allow ping traffic:
+- Allow ICMP (ping):
+```bash
 sudo nft add rule inet filter input ip protocol icmp accept
+```
 
-- How many rules have you added so far? 3
+- How many rules did you add? 3
 
 <br>
 
-## Step 6: Review Rules
-Now check your configuration.
+## Step 6: Review Ruleset
+Verify that everything was added correctly.
 
 - Run:
+```bash
 sudo nft list ruleset
+```
 
 - Look for:
   - inet filter table
   - input chain
-  - your 3 rules
+  - your rules
 
 - Do you see your rules listed? (Yes/No)
 
 <br>
 
-## Step 7: Test Traffic
-We will test if traffic is being allowed.
+## Step 7: Test Connectivity
+Now test if traffic is allowed.
 
 - Run:
-ping 8.8.8.8
+```bash
+ping -c 4 8.8.8.8
+```
 
 - Did the ping work? (Yes/No)
+
+<br>
+
+## Step 8: Block Traffic (Optional Test)
+To see how blocking works, remove the ICMP rule.
+
+- Run:
+```bash
+sudo nft delete rule inet filter input handle <handle_number>
+```
+
+- Then test ping again:
+```bash
+ping -c 4 8.8.8.8
+```
+
+- Did the ping fail? (Yes/No)
+
+<br>
+
+## Step 9: Cleanup
+Remove the table to reset the environment.
+
+- Run:
+```bash
+sudo nft delete table inet filter
+```
+
+- Verify:
+```bash
+sudo nft list ruleset
+```
+
+- Is the ruleset empty? (Yes/No)
 
 <br>
 
@@ -98,11 +171,10 @@ ping 8.8.8.8
 
 ## Learning Objectives
 
-- Understand what nftables is used for
-- View and interpret a ruleset
-- Create a table and chain
-- Add basic firewall rules
-- Test allowed traffic
+- Understand how nftables replaces iptables
+- Create and manage a ruleset
+- Add and verify firewall rules
+- Test allowed and blocked traffic
 
 ## Prerequisites
 
@@ -111,42 +183,50 @@ ping 8.8.8.8
 ## Lab Enviroment Setup
 
 Kali Base
-
-RUN sudo apt-get update
+```bash
+RUN sudo apt-get update -y
 RUN sudo apt-get install nftables -y
 RUN sudo apt-get install iputils-ping -y
+RUN sudo apt-get install net-tools -y
+```
 
 ## Assessment
 
-Assessment 1:
+### Assessment 1:
 Run:
+```bash
 sudo nft list ruleset
+```
 
-Assessment 2:
+### Assessment 2:
 Create a table and input chain
 
-Assessment 3:
-Add 3 rules (loopback, established, icmp)
+### Assessment 3:
+Add rules for loopback, established connections, and ICMP
 
-Assessment 4:
+### Assessment 4:
 Verify rules using:
+```bash
 sudo nft list ruleset
+```
 
-Assessment 5:
-Run ping and confirm it works
+### Assessment 5:
+Test connectivity using ping
 
 ## FAQs
 
-### Why use nftables instead of iptables?
-It is newer, more organized, and easier to manage larger rule sets.
+### Why is nftables considered modern?
+It combines multiple firewall tools into one system and uses a simpler, more flexible structure.
 
-### Why is the default policy set to drop?
-It blocks everything unless explicitly allowed, which is more secure.
+### Why set the default policy to drop?
+It blocks all traffic unless explicitly allowed, which improves security.
+
+### What is a ruleset?
+A ruleset is the complete set of tables, chains, and rules currently active in nftables.
 
 ## Related Skills & Roles
 
 Cybersecurity Analyst  
 Network Administrator  
 Security Engineer  
-System Administrator  .
-
+System Administrator
