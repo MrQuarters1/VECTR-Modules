@@ -17,11 +17,11 @@ version: "1.3"
   
 ## Lab Environment Setup  
 Kali Base + Target VM (same network)  
-  
+ ```bash 
 RUN sudo apt-get update -y  
 RUN sudo apt-get install nfs-common -y  
 RUN sudo apt-get install net-tools -y  
-  
+```  
 ## Background Objectives  
 Network-based storage pools allow multiple systems to access shared storage over a network instead of relying on local disks. This is commonly used in enterprise environments for centralizing data, improving scalability, and simplifying backups. In this lab, you will connect to a shared storage resource between VMs and verify that data can be accessed across the network.  
   
