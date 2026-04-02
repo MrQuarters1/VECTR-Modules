@@ -18,7 +18,7 @@ ifconfig
 ```bash
 sudo nano /etc/hosts
 ```
-- If done correctly you should now be able to ping example.com
+- If done correctly you should now be able to ping example.com and see ```<your_ip>``` in the results.
 ```bash
 ping -c 4 example.com
 ```
@@ -78,9 +78,9 @@ sudo ln -s /etc/nginx/sites-available/hello_world.conf /etc/nginx/sites-enabled/
 ```bash
 sudo nginx -t
 ```
-- Finally we can restart nginx to enable the changes.
+- Finally we can run nginx.
 ```bash
-sudo nginx -s reload
+sudo nginx
 ```
 - We can test to see if the changes are working by running curl on example.com.
 ```bash
