@@ -14,8 +14,18 @@ version: "1.3"
 
 ## Prerequisites
 - none
+## Lab Environment Setup
 
-
+Kali Base
+```bash
+RUN sudo apt-get update
+```
+```bash 
+RUN sudo apt-get install nftables -y
+```
+```bash
+RUN sudo apt-get install net-tools -y
+```
 ## Background Objectives
 nftables is the modern replacement for iptables in Linux systems. Instead of using multiple tools and formats, nftables combines everything into a single framework that uses tables, chains, and rules. This makes firewall management more consistent and easier to understand. In this lab, you will build a basic ruleset from scratch and test how traffic is handled.
 
