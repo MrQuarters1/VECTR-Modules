@@ -15,30 +15,12 @@ version: "1.3"
 ## Prerequisites
 - none
 
-## Lab Environment Setup
-Kali Base
-```bash
-RUN sudo apt-get update -y  
-RUN sudo apt-get install nftables -y  
-RUN sudo apt-get install iputils-ping -y  
-RUN sudo apt-get install net-tools -y  
-```
+
 ## Background Objectives
 nftables is the modern replacement for iptables in Linux systems. Instead of using multiple tools and formats, nftables combines everything into a single framework that uses tables, chains, and rules. This makes firewall management more consistent and easier to understand. In this lab, you will build a basic ruleset from scratch and test how traffic is handled.
 
-## Step 1: Verify nftables Installation
-Before starting, confirm nftables is installed.
 
-In a terminal:
-```bash
-nft --version  
-```
-If it is not installed:
-```bash
-sudo apt-get update  
-sudo apt-get install nftables -y  
-```
-## Step 2: View Current Ruleset
+## Step 1: View Current Ruleset
 Check if any rules already exist.
 ```bast
 Run:  
@@ -49,7 +31,7 @@ Is there an existing ruleset? (Yes/No)
 ### Reflection Question
 - Why is it important to check for an existing ruleset before making changes?
 
-## Step 3: Create a Table
+## Step 2: Create a Table
 Tables are used to organize firewall rules.
 ```bash
 Run:  
@@ -62,7 +44,7 @@ What table did you create? filter
 ### Reflection Question
 - How does organizing rules into tables help with firewall management?
 
-## Step 4: Create a Chain
+## Step 3: Create a Chain
 Chains control how packets are processed.
 ```bash
 Run:  
@@ -75,7 +57,7 @@ What is the default policy? drop
 ### Reflection Question
 - Why is a default drop policy considered more secure?
 
-## Step 5: Add Firewall Rules
+## Step 4: Add Firewall Rules
 Now we will allow specific types of traffic.
 
 Allow loopback traffic:
@@ -95,7 +77,7 @@ How many rules did you add? 3
 ### Reflection Question
 - What types of traffic did you allow and why are they necessary?
 
-## Step 6: Review Ruleset
+## Step 5: Review Ruleset
 Verify that everything was added correctly.
 ```bash
 Run:  
@@ -111,7 +93,7 @@ Do you see your rules listed? (Yes/No)
 ### Reflection Question
 - Why is verifying your ruleset important after making changes?
 
-## Step 7: Test Connectivity
+## Step 6: Test Connectivity
 Now test if traffic is allowed.
 ```bash
 Run:  
@@ -122,7 +104,7 @@ Did the ping work? (Yes/No)
 ### Reflection Question
 - What does a successful ping tell you about your firewall rules?
 
-## Step 8: Block Traffic (Optional Test)
+## Step 7: Block Traffic (Optional Test)
 To see how blocking works, remove the ICMP rule.
 ```bash
 Run:  
@@ -137,7 +119,7 @@ Did the ping fail? (Yes/No)
 ### Reflection Question
 - Why did removing one rule stop the ping from working?
 
-## Step 9: Cleanup
+## Step 8: Cleanup
 Remove the table to reset the environment.
 ```bash
 Run:  
