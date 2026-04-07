@@ -77,7 +77,7 @@ sudo nginx -t
 ```bash
 sudo nginx
 ```
-- We can test to see if the changes are working by running curl on example.com.
+- We can test to see if the changes are working by running curl on example.com. Run this a few times to see if both server1 and server2 are being accessed.
 ```bash
 curl example.com
 ```
