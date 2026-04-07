@@ -41,7 +41,7 @@ curl localhost:8001
 - Why would a user want to run multiple instances of the same server preferably on different machines?
 
 ---
-### Step 2: Create a Configuration for NGINX Reverse Proxy
+## Step 2: Create a Configuration for NGINX Reverse Proxy
 A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
 - In a new console window:
 ```bash
