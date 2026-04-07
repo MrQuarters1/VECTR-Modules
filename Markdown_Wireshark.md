@@ -1,9 +1,5 @@
----
-title: "Networking Tools"
-id: "networking-tools"
-Author: "Ayden Moore"
-Date: "3/10/2026"
----
+# Cybersecurity Lab: Understanding Wireshark Tools
+
 ## Background Objectives
 Wireshark is a tool used to observe network traffic. Filters can be applied to look for specific packets and information. This makes it easier to find if or when a specific connection was made on the network. Wireshark can be used for red team or blue team objectives in cyber security evaluations. 
 
@@ -32,7 +28,7 @@ Wireshark has many features, lets become familiar with some of them.
 
 <br>
 
-## Reflection Questions
+### Reflection Questions
 
 - *How many packets are there in this capture?*
 
@@ -53,7 +49,7 @@ Now that we have become familiar with the look of wireshark lets use some of the
 
 - filters can be more specific by typing && after the filter. try it with the filter tcp&&frame.len==1434 
 
-## Reflection Questions
+### Reflection Questions
 
 - *how many http packets are there?*
 
@@ -78,7 +74,7 @@ Wireshark will give information about each packet allowing us to do analysis of 
 
 - Now that we have looked at the individual packets, lets look at them altogether. right click on frame 4 and press follow, then select HTTP stream. This pulls up a window, it appears to be mostly html from a website. Look through this and see what you can gather about the website. 
 
-## Reflection Questions
+### Reflection Questions
 
 - *What is the first row in the *Transmission Control Protocol* dropdown labeled?* 
 
@@ -90,26 +86,4 @@ Wireshark will give information about each packet allowing us to do analysis of 
 
 - *What is the first line when following the HTTP stream in this capture* 
 
-## Finished!
 
-
-
-## Learning Objectives
-
-- Become familiar with **WireShark** Functionality.
-- Use **Wireshark** to identify different packets.
-- Filter packets to find specific source of network traffic.
-- investigate the different sections of a packet.
-
-## Prerequisites
-
-- **None**
-
-## Lab Enviroment Setup
-
-Kali Base
-```bash
-RUN sudo apt-get install wireshark -y
-RUN sudo apt-get install iputils-ping -y
-
-```
