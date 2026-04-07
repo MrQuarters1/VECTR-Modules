@@ -3,7 +3,7 @@
 ## Background
 A reverse proxy is a useful network tool that enhances security and performance of a web server. Reverse proxies do so by acting as load balancers, SSL terminators, web caches, and anonymizers. Reverse proxies act as a layer in front of your web server rerouting traffic to the correct location.
 
-This lab will outline the basic steps to setup a reverse proxy on a local network with NGINX.
+This lab will outline the basic steps to setup a reverse proxy on a local network with NGINX to act as a load balancer.
 
 ---
 ## Step 1: Edit the Local Hosts File
@@ -18,32 +18,32 @@ sudo nano /etc/hosts
 ping -c 4 example.com
 ```
 
-### Reflection Questions:
-- What is the purpose of adding an entry to the Local Hosts file?
-- Why would ```dig example.com``` not resolve to ```<your_ip>```?
-
----
-## Step 2: Start a Sample Server
-To test our reverse proxy later we will use a simple "Hello World!" python http server.
+To test our reverse proxy later with load balancing we will use a two similar python http servers with slightly different outputs.
 - In a console window:
 ```bash
-cd Content && python -m http.server 8000 --bind 127.0.0.1
+cd ~/Content/server1 && python -m http.server 8000 --bind 127.0.0.1
 ```
-This will create a server available at http://localhost:8000.
-- Run the following command to ensure that it is running properly.
+- In a new console window:
+```bash
+cd ~/Content/server2 && python -m http.server 8001 --bind 127.0.0.1
+```
+This will create a server available at http://localhost:8000 and http://localhost:8001.
+- Run the following command to ensure that the first server is running properly.
 ```bash
 curl localhost:8000
 ```
+- Then run this command for the other server
+```bash
+curl localhost:8001
+```
 
 ### Reflection Questions:
-- Why would a user want to avoid port forwarding port 8000?
-- Would this setup be sufficient for a production environment?
-
+- Why would a user want to run multiple instances of the same server preferably on different machines?
 
 ---
-### Step 3: Create a Configuration for NGINX Reverse Proxy
+### Step 2: Create a Configuration for NGINX Reverse Proxy
 A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
-- In a console window:
+- In a new console window:
 ```bash
 cd /etc/nginx/sites-available
 ```
@@ -52,16 +52,21 @@ cd /etc/nginx/sites-available
 sudo touch hello_world.conf && sudo nano hello_world.conf
 ```
 ```nginx
+http {
+    upstream my_python_webservers {
+        server localhost:8000
+        server localhost:8001
+    }
+}
 server {
     listen 80;
     server_name example.com www.example.com;
 
     location / {
-        proxy_pass http://localhost:8000;
+        proxy_pass http://my_python_webservers;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
 ```
