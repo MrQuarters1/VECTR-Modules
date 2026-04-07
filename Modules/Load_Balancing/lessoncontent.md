@@ -52,11 +52,10 @@ cd /etc/nginx/sites-available
 sudo touch hello_world.conf && sudo nano hello_world.conf
 ```
 ```nginx
-http {
-    upstream my_python_webservers {
-        server localhost:8000
-        server localhost:8001
-    }
+
+upstream my_python_webservers {
+    server localhost:8000;
+    server localhost:8001;
 }
 server {
     listen 80;
@@ -82,11 +81,15 @@ sudo nginx -t
 ```bash
 sudo nginx
 ```
+- If nginx was already running and causes errors we can reload with a different command.
+```bash
+sudo nginx -s reload
+```
 - We can test to see if the changes are working by running curl on example.com.
 ```bash
 curl example.com
 ```
 
 ### Reflection Questions:
-- Why might portforwarding all of your services be a bad idea?
-- How might we modify the line with the proxy pass to resolve to a service running at http://192.168.0.2:3000
+- How might we add a third server running on a seperate machine to the configuration file?
+- In a production environment how would you modify the configuration file to resolve to instances of the server on seperate machines?
