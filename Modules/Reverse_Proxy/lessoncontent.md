@@ -41,7 +41,7 @@ curl localhost:8000
 
 
 ---
-### Step 3: Create a Configuration for NGINX Reverse Proxy
+## Step 3: Create a Configuration for NGINX Reverse Proxy
 A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
 - In a console window:
 ```bash
