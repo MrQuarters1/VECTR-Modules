@@ -33,11 +33,7 @@ Wireshark has many features, lets become familiar with some of them.
 
 - *How many packets are there in this capture?*
 
-<br>
-
 - *How many conversations were in this capture for ethernet?*
-
-<br>
 
 - *What is the default color of the TEXT for a bad TCP?*
 
@@ -53,8 +49,6 @@ Now that we have become familiar with the look of wireshark lets use some of the
 ### Reflection Questions
 
 - *how many http packets are there?*
-
-<br>
 
 - *How many packets are displayed with the filter tcp&&frame.len==1434*
 
@@ -79,11 +73,7 @@ Wireshark will give information about each packet allowing us to do analysis of 
 
 - *What is the first row in the *Transmission Control Protocol* dropdown labeled?* 
 
-<br> 
-
 - *Looking within the *Transmission Control Protcol* dropdown of frame 3* *What is the value in the section labeled "Destination port:"* 
-
-<br>
 
 - *What is the first line when following the HTTP stream in this capture* 
 
