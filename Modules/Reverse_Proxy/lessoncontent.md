@@ -1,18 +1,18 @@
 # Cybersecurity Lab: Understanding Reverse Proxies with NGINX
 
 ## Background
-A reverse proxy is a useful network tool that enhances security and performance of a web server. Reverse proxies do so by acting as load balancers, SSL terminators, web caches, and anonymizers. Reverse proxies act as a layer in front of your web server rerouting traffic to the correct location.
+A reverse proxy is a useful network tool that enhances the security and performance of a web server. Reverse proxies do so by acting as load balancers, SSL terminators, web caches, and anonymizers. Reverse proxies act as a layer in front of your web server, rerouting traffic to the correct location.
 
-This lab will outline the basic steps to setup a reverse proxy on a local network with NGINX.
+This lab will outline the basic steps to set up a reverse proxy on a local network with NGINX.
 
 ---
 ## Step 1: Edit the Local Hosts File
-Ideally you would use a purchased domain for your web server. In place of that we will edit a local file to resolve our ip to our chosen domain name.
+Ideally, you would use a purchased domain for your web server. In place of that, we will edit a local file to resolve our IP to our chosen domain name.
 - Edit the /etc/hosts file by adding an entry to the end of the file. ```127.0.0.1     example.com```
 ```bash
 sudo nano /etc/hosts
 ```
-- If done correctly you should now be able to ping example.com and see ```<your_ip>``` in the results.
+- If done correctly, you should now be able to ping example.com and see ```<your_ip>``` in the results.
 ```bash
 ping -c 4 example.com
 ```
@@ -22,7 +22,7 @@ ping -c 4 example.com
 - Why would ```dig example.com``` not resolve to ```<your_ip>```?
 
 ## Step 2: Start a Sample Server
-To test our reverse proxy later we will use a simple "Hello World!" python http server.
+To test our reverse proxy later, we will use a simple "Hello World!" python http server.
 - In a console window:
 ```bash
 cd Content && python -m http.server 8000 --bind 127.0.0.1
@@ -38,12 +38,12 @@ curl localhost:8000
 - Would this setup be sufficient for a production environment?
 
 ## Step 3: Create a Configuration for NGINX Reverse Proxy
-A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
+A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the HTML. This simplifies our configuration.
 - In a console window:
 ```bash
 cd /etc/nginx/sites-available
 ```
-- Next create a file for our configuration.
+- Next, create a file for our configuration.
 ```bash
 sudo touch hello_world.conf && sudo nano hello_world.conf
 ```
@@ -61,15 +61,15 @@ server {
     }
 }
 ```
-- Next we must create a symbolic link to this file to the sites-enabled folder.
+- Next, we must create a symbolic link to this file to the sites-enabled folder.
 ```bash
 sudo ln -s /etc/nginx/sites-available/hello_world.conf /etc/nginx/sites-enabled/hello_world.conf
 ```
-- Next we can test the configuration. If this returns any errors ensure that there are no typos in the file above.
+- Next, we can test the configuration. If this returns any errors ensure that there are no typos in the file above.
 ```bash
 sudo nginx -t
 ```
-- Finally we can run nginx.
+- Finally, we can run nginx.
 ```bash
 sudo nginx
 ```
@@ -79,5 +79,5 @@ curl example.com
 ```
 
 ### Reflection Questions:
-- Why might portforwarding all of your services be a bad idea?
+- Why might port forwarding all of your services be a bad idea?
 - How might we modify the line with the proxy pass to resolve to a service running at http://192.168.0.2:3000
