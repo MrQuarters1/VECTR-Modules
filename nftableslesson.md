@@ -51,3 +51,25 @@ Remove a rule and observe the effect on connectivity
 ```bash
 Delete the table and confirm the ruleset is cleared
 ```
+### FAQs
+
+What is nftables?
+nftables is the modern Linux firewall framework that replaces iptables and provides a unified way to manage filtering rules.
+
+Why is nftables considered an improvement over iptables?
+It simplifies rule management by combining multiple tools into one system and uses a more consistent structure.
+
+What is a table in nftables?
+A table is a container that holds chains and rules used to filter network traffic.
+
+What is a chain?
+A chain defines how packets are processed and includes a default policy such as accept or drop.
+
+Why use a default drop policy?
+It blocks all traffic unless explicitly allowed, which increases security.
+
+### Related Skills & Roles
+Cybersecurity Analyst
+Network Administrator
+Security Engineer
+System Administrator
