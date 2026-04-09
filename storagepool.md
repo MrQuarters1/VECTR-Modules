@@ -131,29 +131,6 @@ Is the mount removed? (Yes/No)
 ### Reflection Question  
 - Why is it important to properly unmount network storage?  
   
-## Finished!  
-  
-## Assessment  
-Assessment 1: 
-```bash
-Run:  
-ping -c 4 <target_vm_ip>  
-```
-Assessment 2:  
-Identify available shared directories  
-  
-Assessment 3:  
-Mount the shared storage  
-  
-Assessment 4:  
-Verify mount using:
-```bash
-df -h  
-```
-Assessment 5:  
-```
-Create and verify a test file  
-```  
 ## FAQs  
 What is network-based storage?  
 It is storage that is accessed over a network instead of being physically attached to a single machine.  
