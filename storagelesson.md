@@ -56,3 +56,25 @@ Verify file visibility from another VM
 ```bash
 Unmount the storage and confirm it is removed
 ```
+### FAQs
+
+What is network-based storage?
+Network-based storage allows multiple systems to access shared data over a network instead of using local disks.
+
+What is NFS?
+NFS (Network File System) is a protocol that allows files to be shared between systems across a network.
+
+Why use storage pools?
+Storage pools centralize data, making it easier to manage, scale, and back up across multiple systems.
+
+Why do you need to mount storage?
+Mounting connects the remote storage to your local filesystem so you can interact with it like a normal directory.
+
+Why is verifying across multiple VMs important?
+It confirms that the storage is truly shared and accessible between different systems on the network.
+
+### Related Skills & Roles
+Cybersecurity Analyst
+Network Administrator
+Systems Engineer
+Cloud Engineer
