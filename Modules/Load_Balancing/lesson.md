@@ -12,7 +12,7 @@ version: "1.0"
 - Add two web servers to the reverse proxy to test load balancing.
 
 ## Prerequisites
-- Folder called Content with two folders each containing an index.html should be added to home directory.
+- A Folder called Content with two folders each containing an index.html should be added to home directory.
 
 ## Lab Environment Setup
 Kali Base
