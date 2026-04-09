@@ -12,8 +12,7 @@ version: "1.0"
 - Add a simple web server to the reverse proxy.
 
 ## Prerequisites
-- Folder called Content with index.html should be added to home directory.
-
+- A Folder called Content with index.html should be added to home directory.
 
 ## Lab Environment Setup
 Kali Base
