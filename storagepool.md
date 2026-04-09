@@ -131,18 +131,4 @@ Is the mount removed? (Yes/No)
 ### Reflection Question  
 - Why is it important to properly unmount network storage?  
   
-## FAQs  
-What is network-based storage?  
-It is storage that is accessed over a network instead of being physically attached to a single machine.  
-  
-Why use storage pools?  
-They allow multiple systems to access shared data, making management and scaling easier.  
-  
-What is NFS?  
-Network File System (NFS) is a protocol that allows file sharing between systems over a network.  
-  
-## Related Skills & Roles  
-- Cybersecurity Analyst  
-- Network Administrator  
-- Systems Engineer  
-- Cloud Engineer
+
