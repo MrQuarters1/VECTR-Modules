@@ -36,7 +36,7 @@ GET
 
 ## Prerequisites
 
-- **None**
+- Needs a folder called content with the http.cap file
 
 ## Lab Enviroment Setup
 
