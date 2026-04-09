@@ -19,6 +19,7 @@ Kali Base
 ```bash
 RUN sudo apt-get install nginx -y
 RUN sudo apt-get install iputils-ping -y
+RUN sudo apt-get install curl -y
 ```
 
 ## Assessment
