@@ -50,10 +50,11 @@ A configuration file is required to create the Reverse Proxy. We are not using N
 ```bash
 cd /etc/nginx/sites-available
 ```
-- Next, create a file for our configuration.
+- Next, we can create a file for our configuration and open it up in a text editor.
 ```bash
 sudo touch hello_world.conf && sudo nano hello_world.conf
 ```
+- Add the following contents to this file:
 ```nginx
 upstream my_python_webservers {
     server localhost:8000;
@@ -87,7 +88,7 @@ sudo nginx
 ```bash
 sudo nginx -s reload
 ```
-- We can test to see if the changes are working by running curl on example.com.
+- We can test to see if the changes are working by running curl on example.com. Run this a few times to see if both server1 and server2 are being accessed.
 ```bash
 curl example.com
 ```

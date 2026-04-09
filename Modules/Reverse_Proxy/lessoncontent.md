@@ -73,10 +73,11 @@ sudo nginx -t
 ```bash
 sudo nginx
 ```
-- We can test to see if the changes are working by running curl on example.com. Run this a few times to see if both server1 and server2 are being accessed.
+- We can test to see if the changes are working by running curl on example.com.
 ```bash
 curl example.com
 ```
+- The result should be a response with a message ```"Hello World!"```.
 
 ### Reflection Questions:
 - Why might port forwarding all of your services be a bad idea?
