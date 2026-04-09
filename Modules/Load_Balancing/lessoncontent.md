@@ -8,8 +8,7 @@ This lab will outline the basic steps to setup a reverse proxy on a local networ
 ---
 ## Step 1: Edit the Local Hosts File
 Ideally you would use a purchased domain for your web server. In place of that we will edit a local file to resolve our ip to our chosen domain name.
-- Edit the /etc/hosts file by adding an entry to the end of the file.
-    - ```127.0.0.1     example.com```
+- Edit the /etc/hosts file by adding an entry to the end of the file. ```127.0.0.1     example.com```
 ```bash
 sudo nano /etc/hosts
 ```
@@ -57,7 +56,6 @@ cd /etc/nginx/sites-available
 sudo touch hello_world.conf && sudo nano hello_world.conf
 ```
 ```nginx
-
 upstream my_python_webservers {
     server localhost:8000;
     server localhost:8001;

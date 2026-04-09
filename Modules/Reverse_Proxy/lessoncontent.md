@@ -8,8 +8,7 @@ This lab will outline the basic steps to setup a reverse proxy on a local networ
 ---
 ## Step 1: Edit the Local Hosts File
 Ideally you would use a purchased domain for your web server. In place of that we will edit a local file to resolve our ip to our chosen domain name.
-- Edit the /etc/hosts file by adding an entry to the end of the file.
-    - ```127.0.0.1     example.com```
+- Edit the /etc/hosts file by adding an entry to the end of the file. ```127.0.0.1     example.com```
 ```bash
 sudo nano /etc/hosts
 ```
@@ -22,7 +21,6 @@ ping -c 4 example.com
 - What is the purpose of adding an entry to the Local Hosts file?
 - Why would ```dig example.com``` not resolve to ```<your_ip>```?
 
----
 ## Step 2: Start a Sample Server
 To test our reverse proxy later we will use a simple "Hello World!" python http server.
 - In a console window:
@@ -39,8 +37,6 @@ curl localhost:8000
 - Why would a user want to avoid port forwarding port 8000?
 - Would this setup be sufficient for a production environment?
 
-
----
 ## Step 3: Create a Configuration for NGINX Reverse Proxy
 A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
 - In a console window:
