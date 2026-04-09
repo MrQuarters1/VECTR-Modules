@@ -18,6 +18,11 @@ sudo nano /etc/hosts
 ping -c 4 example.com
 ```
 
+### Reflection Questions:
+- What is the purpose of adding an entry to the Local Hosts file?
+- Why would ```dig example.com``` not resolve to ```<your_ip>```?
+
+### Step 2: Start Sample Python Servers
 To test our reverse proxy later with load balancing we will use a two similar python http servers with slightly different outputs.
 - In a console window:
 ```bash
@@ -41,7 +46,7 @@ curl localhost:8001
 - Why would a user want to run multiple instances of the same server preferably on different machines?
 
 ---
-## Step 2: Create a Configuration for NGINX Reverse Proxy
+## Step 3: Create a Configuration for NGINX Reverse Proxy
 A configuration file is required to create the Reverse Proxy. We are not using NGINX to serve the html. This simplifies our configuration.
 - In a new console window:
 ```bash
