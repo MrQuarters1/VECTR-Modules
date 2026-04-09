@@ -36,31 +36,29 @@ RUN sudo apt-get install iputils-ping -y
 
 - *How many conversations were in this capture for ethernet?* **1**
 
-- *What is the default color of the TEXT for a bad TCP?* Red
+- *What is the default color of the TEXT for a bad TCP?* **Red**
 
 ### Assessment 3: 
 - Use filters to reduce clutter.
 
 #### Reflection Questions Answers
 
-- *how many http packets are there?* 4
+- *how many http packets are there?* **4**
 
-- *How many packets are displayed with these filters?* 13
+- *How many packets are displayed with these filters?* **13**
 
 ### Assessment 4:
  - Analyze individual packets.
 #### Relection Questions Answers
 
 - *What is the first row in the *Transmission Control Protocol* dropdown labeled?* 
-Source port:
+**Source port:**
 
-<br> 
 
 - *Looking within the *Transmission Control Protcol* dropdown of frame 3* *What is the value in the section labeled "Destination port:"* 
-80
+**80**
 
-<br>
 
 - *What is the first word when following the HTTP stream in this capture*
-GET 
+**GET** 
 
