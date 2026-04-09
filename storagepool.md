@@ -1,5 +1,5 @@
 ---  
-title: "Network Based Storage Pools (VECTR VM Lab)"  
+title: "Network Based Storage Pools"  
 id: "network-based-storage-pools"  
 author: "Toby Knudsen"  
 date: "2026-04-02"  
