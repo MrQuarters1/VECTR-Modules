@@ -4,10 +4,11 @@
 Wireshark is a tool used to observe network traffic. Filters can be applied to look for specific packets and information. This makes it easier to find if or when a specific connection was made on the network. Wireshark can be used for red team or blue team objectives in cyber security evaluations. 
 
 ## Step 1: Open the Captured Packets
-We must open the captured packets with wireshark.
+We must open the captured packets with wireshark. 
 
 - In a console window:
 ```bash
+cd Content/
 sudo wireshark -r http.pcap
 ```
 
