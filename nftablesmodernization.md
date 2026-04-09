@@ -144,38 +144,4 @@ Is the ruleset empty? (Yes/No)
 ### Reflection Question
 - Why is cleanup important after completing a lab?
 
-## Finished!
 
-## Assessment
-Assessment 1:  
-Run:  
-sudo nft list ruleset  
-
-Assessment 2:  
-Create a table and input chain  
-
-Assessment 3:  
-Add rules for loopback, established connections, and ICMP  
-
-Assessment 4:  
-Verify rules using:  
-sudo nft list ruleset  
-
-Assessment 5:  
-Test connectivity using ping  
-
-## FAQs
-Why is nftables considered modern?  
-It combines multiple firewall tools into one system and uses a simpler, more flexible structure.  
-
-Why set the default policy to drop?  
-It blocks all traffic unless explicitly allowed, which improves security.  
-
-What is a ruleset?  
-A ruleset is the complete set of tables, chains, and rules currently active in nftables.  
-
-## Related Skills & Roles
-- Cybersecurity Analyst  
-- Network Administrator  
-- Security Engineer  
-- System Administrator  
