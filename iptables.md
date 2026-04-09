@@ -6,13 +6,13 @@ date: "2026-04-07"
 version: "1.0"
 --- 
 
-## Learning Objectives
+### Learning Objectives
 - Understand how **iptables** is used for firewall management in Linux
 - View and interpret existing iptables rules
 - Create basic rules to allow and block traffic
 - Test and verify firewall behavior
 
-## Prerequisites
+### Prerequisites
 - none
 
 
@@ -28,7 +28,7 @@ Background Objectives
 
 iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
 
-## Step 1: View Current Rules
+### Step 1: View Current Rules
 
 Check the current iptables rules to see what is already configured.
 ```bash
@@ -36,7 +36,7 @@ sudo iptables -L -v
 ```
 Look at the default chains such as INPUT, OUTPUT, and FORWARD. These control how traffic is handled.
 
-## Step 2: Set Default Policy
+### Step 2: Set Default Policy
 
 Set the default policy for incoming traffic to DROP so that all traffic is blocked unless explicitly allowed.
 ```bash
@@ -94,27 +94,3 @@ Verify that rules have been removed:
 ```bash
 sudo iptables -L
 ```
-### Assessment
-Assessment 1:
-```bash
-Run iptables -L -v
-```
-Identify default chains
-Assessment 2:
-```bash
-Set INPUT policy to DROP
-```
-Verify change
-Assessment 3:
-```bash
-Add rule to allow localhost traffic
-```
-Assessment 4:
-Add rule for established connections
-Confirm connectivity still works
-Assessment 5:
-Add and test ICMP rule
-Assessment 6:
-Add a rule to block a specific IP
-Assessment 7:
-Flush all rules and restore default policy
