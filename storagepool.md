@@ -1,10 +1,10 @@
----  
-title: "Network Based Storage Pools"  
-id: "network-based-storage-pools"  
-author: "Toby Knudsen"  
-date: "2026-04-02"  
-version: "1.3"  
----  
+# Network Based Storage Pools 
+
+## Background
+
+Network-based storage allows multiple systems to access shared data over a network rather than storing everything locally on a single machine. This approach is commonly used in enterprise environments to centralize data, improve scalability, and simplify backup and recovery processes. Instead of each system maintaining its own storage, resources can be shared and managed more efficiently.
+
+One common method of implementing this is through the Network File System (NFS), which enables systems to mount remote directories as if they were part of the local filesystem. In this lab, you will connect to a shared storage resource between virtual machines, verify that it is accessible, and confirm that data can be read and written across systems.
   
 ## Learning Objectives  
 - Understand what network-based storage is and why it is used  
@@ -22,8 +22,6 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install nfs-common -y  
 RUN sudo apt-get install net-tools -y  
 ```  
-## Background Objectives  
-Network-based storage pools allow multiple systems to access shared storage over a network instead of relying on local disks. This is commonly used in enterprise environments for centralizing data, improving scalability, and simplifying backups. In this lab, you will connect to a shared storage resource between VMs and verify that data can be accessed across the network.  
   
 ## Step 1: Verify Network Connectivity  
 Before accessing shared storage, confirm that your VMs can communicate.  
