@@ -6,6 +6,7 @@ nftables is the modern firewall framework used in Linux and is designed to repla
 
 Firewalls play an important role in controlling network traffic by allowing or blocking packets based on defined rules. nftables improves this process by providing more flexibility and efficiency when creating and managing these rules. In this lab, you will build a basic ruleset, allow specific types of traffic, and test how those rules impact connectivity.
 
+---
 ## Learning Objectives
 - Understand how nftables modernizes Linux firewall management
 - View and interpret an nftables ruleset
