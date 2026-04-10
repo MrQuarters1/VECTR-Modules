@@ -2,17 +2,17 @@
 # Firewall Management with iptables
 
 
-### Background
+## Background
 
 iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
 
-### Learning Objectives
+## Learning Objectives
 - Understand how iptables is used for firewall management in Linux
 - View and interpret existing iptables rules
 - Create basic rules to allow and block traffic
 - Test and verify firewall behavior
 
-### Prerequisites
+## Prerequisites
 - none
 
 ### Lab Environment Setup
@@ -28,7 +28,7 @@ RUN sudo apt-get install net-tools -y
 
 iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
 
-### Step 1: View Current Rules
+## Step 1: View Current Rules
 ---
 Check the current iptables rules to see what is already configured.
 ```bash
@@ -40,7 +40,7 @@ Look at the default chains such as INPUT, OUTPUT, and FORWARD. These control how
 - What are the three default chains shown in iptables?
 
 - What does each chain control in terms of traffic flow?
-### Step 2: Set Default Policy
+## Step 2: Set Default Policy
 ---
 Set the default policy for incoming traffic to DROP so that all traffic is blocked unless explicitly allowed.
 ```bash
@@ -54,7 +54,7 @@ sudo iptables -L
 - What does setting the default policy to DROP do?
 
 - Why is a default-deny approach considered more secure?
-### Step 3: Allow Localhost Traffic
+## Step 3: Allow Localhost Traffic
 ---
 Allow traffic from the local machine so basic system processes continue to work.
 ```bash
@@ -64,7 +64,7 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 - What is the loopback interface (lo)?
 
 - Why would blocking localhost traffic cause issues?
-### Step 4: Allow Established Connections
+## Step 4: Allow Established Connections
 ---
 Allow responses to outgoing connections so normal browsing and communication works.
 ```bash
@@ -74,7 +74,7 @@ Reflection Questions
 - What are “ESTABLISHED” and “RELATED” connections?
 
 - Why is this rule necessary for normal network usage?
-### Step 5: Allow ICMP (Ping)
+## Step 5: Allow ICMP (Ping)
 ---
 Allow ping requests to test connectivity.
 ```bash
@@ -82,11 +82,11 @@ sudo iptables -A INPUT -p icmp -j ACCEPT
 ```
 Test this by pinging your machine from another system if available.
 
-### Reflection Questions
+## Reflection Questions
 - What protocol does ping use?
 
 - What does a successful ping tell you about connectivity?
-### Step 6: Block Specific Traffic
+## Step 6: Block Specific Traffic
 ---
 Block a specific IP address to simulate restricting access.
 ```bash
@@ -98,7 +98,7 @@ Replace the IP if needed depending on your environment.
 - What does this rule do to traffic from that IP address?
 
 - In what situations would blocking a specific IP be useful?
-### Step 7: Verify Rules
+## Step 7: Verify Rules
 ---
 List all rules again to confirm everything is applied correctly.
 ```bash
@@ -110,7 +110,7 @@ Make sure your rules appear in the correct order.
 - Why does the order of rules matter in iptables?
 
 - What could happen if rules are placed in the wrong order?
-### Step 8: Flush Rules (Reset)
+## Step 8: Flush Rules (Reset)
 ---
 Clear all rules to return the system to its original state.
 ```bash
