@@ -41,6 +41,8 @@ Is there an existing ruleset? (Yes/No)
 ### Reflection Question
 - Why is it important to check for an existing ruleset before making changes?
 
+- What could happen if you add new rules without knowing the current configuration?
+
 ## Step 2: Create a Table
 Tables are used to organize firewall rules.
 ```bash
@@ -51,8 +53,10 @@ This creates a table named "filter" that works for IPv4 and IPv6.
 
 What table did you create? filter
 
-### Reflection Question
+### Reflection Questions
 - How does organizing rules into tables help with firewall management?
+
+- Why might separating rules into different tables be useful in larger systems?
 
 ## Step 3: Create a Chain
 Chains control how packets are processed.
@@ -64,8 +68,10 @@ This creates an input chain with a default policy of dropping traffic.
 
 What is the default policy? drop
 
-### Reflection Question
+### Reflection Questions
 - Why is a default drop policy considered more secure?
+
+- What would be the risk of using a default accept policy instead?
 
 ## Step 4: Add Firewall Rules
 Now we will allow specific types of traffic.
@@ -84,8 +90,10 @@ sudo nft add rule inet filter input ip protocol icmp accept
 ```
 How many rules did you add? 3
 
-### Reflection Question
+### Reflection Questions
 - What types of traffic did you allow and why are they necessary?
+
+- What would break if one of these rules was missing?
 
 ## Step 5: Review Ruleset
 Verify that everything was added correctly.
@@ -103,6 +111,8 @@ Do you see your rules listed? (Yes/No)
 ### Reflection Question
 - Why is verifying your ruleset important after making changes?
 
+- How can reviewing the ruleset help identify configuration errors?
+
 ## Step 6: Test Connectivity
 Now test if traffic is allowed.
 ```bash
@@ -113,6 +123,8 @@ Did the ping work? (Yes/No)
 
 ### Reflection Question
 - What does a successful ping tell you about your firewall rules?
+
+- What might it indicate if the ping fails unexpectedly?
 
 ## Step 7: Block Traffic (Optional Test)
 To see how blocking works, remove the ICMP rule.
@@ -129,6 +141,8 @@ Did the ping fail? (Yes/No)
 ### Reflection Question
 - Why did removing one rule stop the ping from working?
 
+- How does this demonstrate the importance of individual firewall rules?
+
 ## Step 8: Cleanup
 Remove the table to reset the environment.
 ```bash
@@ -143,5 +157,7 @@ Is the ruleset empty? (Yes/No)
 
 ### Reflection Question
 - Why is cleanup important after completing a lab?
+
+- What issues could occur if old firewall rules are left in place?
 
 
