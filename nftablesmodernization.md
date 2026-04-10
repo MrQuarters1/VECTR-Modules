@@ -14,6 +14,7 @@ nftables is the modern replacement for iptables in Linux systems. Instead of usi
 
 
 ## Step 1: View Current Ruleset
+---
 Check if any rules already exist.
 ```bast
 Run:  
@@ -27,6 +28,7 @@ Is there an existing ruleset? (Yes/No)
 - What could happen if you add new rules without knowing the current configuration?
 
 ## Step 2: Create a Table
+---
 Tables are used to organize firewall rules.
 ```bash
 Run:  
@@ -42,6 +44,7 @@ What table did you create? filter
 - Why might separating rules into different tables be useful in larger systems?
 
 ## Step 3: Create a Chain
+---
 Chains control how packets are processed.
 ```bash
 Run:  
@@ -57,6 +60,7 @@ What is the default policy? drop
 - What would be the risk of using a default accept policy instead?
 
 ## Step 4: Add Firewall Rules
+---
 Now we will allow specific types of traffic.
 
 Allow loopback traffic:
@@ -79,6 +83,7 @@ How many rules did you add? 3
 - What would break if one of these rules was missing?
 
 ## Step 5: Review Ruleset
+---
 Verify that everything was added correctly.
 ```bash
 Run:  
@@ -97,6 +102,7 @@ Do you see your rules listed? (Yes/No)
 - How can reviewing the ruleset help identify configuration errors?
 
 ## Step 6: Test Connectivity
+---
 Now test if traffic is allowed.
 ```bash
 Run:  
@@ -110,6 +116,7 @@ Did the ping work? (Yes/No)
 - What might it indicate if the ping fails unexpectedly?
 
 ## Step 7: Block Traffic (Optional Test)
+---
 To see how blocking works, remove the ICMP rule.
 ```bash
 Run:  
@@ -127,6 +134,7 @@ Did the ping fail? (Yes/No)
 - How does this demonstrate the importance of individual firewall rules?
 
 ## Step 8: Cleanup
+---
 Remove the table to reset the environment.
 ```bash
 Run:  
