@@ -5,7 +5,8 @@
 Network-based storage allows multiple systems to access shared data over a network rather than storing everything locally on a single machine. This approach is commonly used in enterprise environments to centralize data, improve scalability, and simplify backup and recovery processes. Instead of each system maintaining its own storage, resources can be shared and managed more efficiently.
 
 One common method of implementing this is through the Network File System (NFS), which enables systems to mount remote directories as if they were part of the local filesystem. In this lab, you will connect to a shared storage resource between virtual machines, verify that it is accessible, and confirm that data can be read and written across systems.
-  
+
+---
 ## Learning Objectives  
 - Understand what network-based storage is and why it is used  
 - Identify how storage pools are accessed over a network  
