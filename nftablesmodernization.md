@@ -1,10 +1,10 @@
----
-title: "Modernization with nftables"
-id: "modernization-with-nftables"
-author: "Toby Knudsen"
-date: "2026-03-30"
-version: "1.3"
----
+# Modernization with nftables
+
+### Background
+
+nftables is the modern firewall framework used in Linux and is designed to replace older tools like iptables. Instead of relying on multiple separate utilities, nftables combines everything into a single system that uses tables, chains, and rules to manage traffic. This structure makes firewall configurations more organized, consistent, and easier to understand compared to older approaches.
+
+Firewalls play an important role in controlling network traffic by allowing or blocking packets based on defined rules. nftables improves this process by providing more flexibility and efficiency when creating and managing these rules. In this lab, you will build a basic ruleset, allow specific types of traffic, and test how those rules impact connectivity.
 
 ## Learning Objectives
 - Understand how nftables modernizes Linux firewall management
