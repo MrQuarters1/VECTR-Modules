@@ -1,10 +1,10 @@
---- 
-title: "Firewall Management with iptables"
-id: "firewall-management-iptables"
-author: "Toby Knudsen"
-date: "2026-04-07"
-version: "1.4"
---- 
+
+### Firewall Management with iptables
+
+
+### Background
+
+iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
 
 ### Learning Objectives
 - Understand how iptables is used for firewall management in Linux
