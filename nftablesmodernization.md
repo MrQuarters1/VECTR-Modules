@@ -1,6 +1,6 @@
 # Modernization with nftables
 
-### Background
+## Background
 
 nftables is the modern firewall framework used in Linux and is designed to replace older tools like iptables. Instead of relying on multiple separate utilities, nftables combines everything into a single system that uses tables, chains, and rules to manage traffic. This structure makes firewall configurations more organized, consistent, and easier to understand compared to older approaches.
 
