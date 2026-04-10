@@ -8,7 +8,8 @@ One common method of implementing this is through the Network File System (NFS),
 
 ---
   
-## Step 1: Verify Network Connectivity  
+## Step 1: Verify Network Connectivity 
+---
 Before accessing shared storage, confirm that your VMs can communicate.  
 ```bash
 Run:  
@@ -20,6 +21,7 @@ Did the ping work? (Yes/No)
 - Why is network connectivity required before accessing shared storage?
 - What might be causing issues if the ping fails?
 ## Step 2: Identify Available Network Storage  
+---
 Check if a shared storage resource is available.  
 ```bash
 Run:  
@@ -32,6 +34,7 @@ Do you see any shared directories? (Yes/No)
 - Why is it important to know what resources are shared before mounting?
   
 ## Step 3: Create a Mount Point  
+---
 You need a directory to attach the network storage.  
 ```bash 
 Run:  
@@ -44,6 +47,7 @@ What directory did you create? /mnt/shared_storage
 - What could happen if you mount to the wrong directory?
   
 ## Step 4: Mount the Network Storage  
+---
 Connect to the shared storage pool.  
 ```bash
 Run:  
@@ -56,6 +60,7 @@ Did the mount complete successfully? (Yes/No)
 - Why is the correct path important when mounting storage?
   
 ## Step 5: Verify Mounted Storage  
+---
 Confirm the storage is mounted correctly.  
 ```bash  
 Run:  
@@ -68,6 +73,7 @@ Do you see the mounted share listed? (Yes/No)
 - What could go wrong if the mount appears but is not functioning properly?
   
 ## Step 6: Access Shared Files  
+---
 Navigate into the mounted directory.  
 ```bash
 Run:  
@@ -81,6 +87,7 @@ Do you see files in the shared storage? (Yes/No)
 - What might it mean if the directory appears empty?
   
 ## Step 7: Create a Test File  
+---
 Test writing to the shared storage.  
 ```bash
 Run:  
@@ -93,7 +100,8 @@ Did your file appear? (Yes/No)
 - Why is testing write access important for shared storage?
 - What issues could prevent you from creating files?
   
-## Step 8: Verify from Another VM  
+## Step 8: Verify from Another VM 
+---
 Switch to another VM and check if the file exists.  
 ```bash
 Run:  
@@ -107,6 +115,7 @@ Do you see the same file? (Yes/No)
 - Why is shared visibility important in real-world environments?
   
 ## Step 9: Unmount Storage  
+---
 Clean up by disconnecting the storage.  
 ```bash
 Run:  
