@@ -7,22 +7,6 @@ Network-based storage allows multiple systems to access shared data over a netwo
 One common method of implementing this is through the Network File System (NFS), which enables systems to mount remote directories as if they were part of the local filesystem. In this lab, you will connect to a shared storage resource between virtual machines, verify that it is accessible, and confirm that data can be read and written across systems.
 
 ---
-## Learning Objectives  
-- Understand what network-based storage is and why it is used  
-- Identify how storage pools are accessed over a network  
-- Mount and interact with a network storage share  
-- Verify connectivity between VMs and shared storage  
-  
-## Prerequisites  
-- none  
-  
-## Lab Environment Setup  
-Kali Base + Target VM (same network)  
- ```bash 
-RUN sudo apt-get update -y  
-RUN sudo apt-get install nfs-common -y  
-RUN sudo apt-get install net-tools -y  
-```  
   
 ## Step 1: Verify Network Connectivity  
 Before accessing shared storage, confirm that your VMs can communicate.  
