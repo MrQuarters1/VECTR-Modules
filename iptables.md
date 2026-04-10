@@ -4,8 +4,10 @@
 
 ## Background
 
-iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
+iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing network traffic. It works by defining rules that either allow or block packets based on criteria such as IP address, protocol, port number, or connection state. These rules are organized into chains like INPUT, OUTPUT, and FORWARD, which determine how traffic is handled depending on whether it is entering, leaving, or passing through the system.
 
+Even though newer tools like nftables have been developed to simplify firewall management, iptables is still widely used and important to understand. Many systems and environments continue to rely on it, and it provides a strong foundation for learning how firewalls operate. In this lab, you will create and modify basic firewall rules to better understand how traffic can be controlled and secured.
+---
 ## Learning Objectives
 - Understand how iptables is used for firewall management in Linux
 - View and interpret existing iptables rules
