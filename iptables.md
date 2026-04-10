@@ -8,25 +8,7 @@ iptables is a legacy firewall tool used in Linux systems to control incoming and
 
 Even though newer tools like nftables have been developed to simplify firewall management, iptables is still widely used and important to understand. Many systems and environments continue to rely on it, and it provides a strong foundation for learning how firewalls operate. In this lab, you will create and modify basic firewall rules to better understand how traffic can be controlled and secured.
 
----
-## Learning Objectives
-- Understand how iptables is used for firewall management in Linux
-- View and interpret existing iptables rules
-- Create basic rules to allow and block traffic
-- Test and verify firewall behavior
 
-## Prerequisites
-- none
-
-### Lab Environment Setup
----
-Kali Base
-```bash
-RUN sudo apt-get update -y
-RUN sudo apt-get install iptables -y
-RUN sudo apt-get install iputils-ping -y
-RUN sudo apt-get install net-tools -y
-```
 ### Background Objectives
 
 iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
