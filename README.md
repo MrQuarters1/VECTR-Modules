@@ -9,10 +9,10 @@ The following Modules were created located in the Modules folder:
 - Subnets
 
 NEST Team:
-Saleh Hayati
-Toby Knudsen
-Connor Licht
-Ayden Moore
-Ahmad Hasan
+- Saleh Hayati
+- Toby Knudsen
+- Connor Licht
+- Ayden Moore
+- Ahmad Hasan
 
 
