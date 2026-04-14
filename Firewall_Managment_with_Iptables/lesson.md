@@ -23,6 +23,8 @@ RUN sudo apt-get install iptables -y
 RUN sudo apt-get install iputils-ping -y
 RUN sudo apt-get install net-tools -y
 ```
+
+## Assessment
 ### Assessment 1:
 ```bash
 Run iptables -L -v
@@ -54,8 +56,8 @@ Add a rule to block a specific IP
 ```bash
 Flush all rules and restore default policy
 ```
-### FAQs
 
+### FAQs
 What is iptables?
 iptables is a Linux firewall tool used to control incoming and outgoing network traffic based on defined rules.
 
