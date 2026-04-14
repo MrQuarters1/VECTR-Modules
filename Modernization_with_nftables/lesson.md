@@ -22,7 +22,7 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install nftables -y
 RUN sudo apt-get install net-tools -y
 ```
-## Assessments
+## Assessment
 ### Assessment 1:
 ```bash
 View current ruleset using nft list ruleset
