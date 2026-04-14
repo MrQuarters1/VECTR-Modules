@@ -26,55 +26,42 @@ RUN sudo apt-get install net-tools -y
 
 ## Assessment
 ### Assessment 1:
-```bash
-Run iptables -L -v
-```
+
+- iptables -L -v
+
 Identify default chains
 ### Assessment 2:
-```bash
-Set INPUT policy to DROP
-```
-Verify change
+- Set INPUT policy to DROP
+- Verify change
 ### Assessment 3:
-```bash
-Add rule to allow localhost traffic
-```
+- Add rule to allow localhost traffic
 ### Assessment 4:
-```bash
-Add rule for established connections
-```
-Confirm connectivity still works
+- Add rule for established connections
+- Confirm connectivity still works
 ### Assessment 5:
-```bash
-Add and test ICMP rule
-```
+- Add and test ICMP rule
 ### Assessment 6:
-```bash
-Add a rule to block a specific IP
-```
+- Add a rule to block a specific IP
 ### Assessment 7:
-```bash
-Flush all rules and restore default policy
-```
-
+- Flush all rules and restore default policy
 ### FAQs
 What is iptables?
-iptables is a Linux firewall tool used to control incoming and outgoing network traffic based on defined rules.
+- iptables is a Linux firewall tool used to control incoming and outgoing network traffic based on defined rules.
 
 What are chains in iptables?
-Chains are sets of rules that determine how packets are processed, such as INPUT, OUTPUT, and FORWARD.
+- Chains are sets of rules that determine how packets are processed, such as INPUT, OUTPUT, and FORWARD.
 
 What does a default policy do?
-A default policy defines what happens to traffic that does not match any rules, such as ACCEPT or DROP.
+- A default policy defines what happens to traffic that does not match any rules, such as ACCEPT or DROP.
 
 Why use a default DROP policy?
-It blocks all traffic unless explicitly allowed, improving overall security.
+- It blocks all traffic unless explicitly allowed, improving overall security.
 
 What is ICMP used for?
-ICMP is used for network diagnostics, such as the ping command.
+- ICMP is used for network diagnostics, such as the ping command.
 
 ### Related Skills & Roles
-Cybersecurity Analyst
-Network Administrator
-Security Engineer
-System Administrator
+- Cybersecurity Analyst
+- Network Administrator
+- Security Engineer
+- System Administrator
