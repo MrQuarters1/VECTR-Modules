@@ -16,8 +16,7 @@ nftables is the modern replacement for iptables in Linux systems. Instead of usi
 ## Step 1: View Current Ruleset
 
 Check if any rules already exist.
-```bast
-Run:  
+```bash
 sudo nft list ruleset  
 ```
 Is there an existing ruleset? (Yes/No)
@@ -30,7 +29,6 @@ Is there an existing ruleset? (Yes/No)
 
 Tables are used to organize firewall rules.
 ```bash
-Run:  
 sudo nft add table inet filter  
 ```
 This creates a table named "filter" that works for IPv4 and IPv6.
@@ -45,7 +43,6 @@ What table did you create? filter
 
 Chains control how packets are processed.
 ```bash
-Run:  
 sudo nft add chain inet filter input { type filter hook input priority 0 \; policy drop \; }  
 ```
 This creates an input chain with a default policy of dropping traffic.
@@ -82,7 +79,6 @@ How many rules did you add? 3
 
 Verify that everything was added correctly.
 ```bash
-Run:  
 sudo nft list ruleset  
 ```
 Look for:  
@@ -100,7 +96,6 @@ Do you see your rules listed? (Yes/No)
 
 Now test if traffic is allowed.
 ```bash
-Run:  
 ping -c 4 8.8.8.8  
 ```
 Did the ping work? (Yes/No)
@@ -113,7 +108,6 @@ Did the ping work? (Yes/No)
 
 To see how blocking works, remove the ICMP rule.
 ```bash
-Run:  
 sudo nft delete rule inet filter input handle <handle_number>  
 ```
 Then test ping again:
@@ -130,7 +124,6 @@ Did the ping fail? (Yes/No)
 
 Remove the table to reset the environment.
 ```bash
-Run:  
 sudo nft delete table inet filter  
 ```
 Verify:
