@@ -24,57 +24,42 @@ RUN sudo apt-get install net-tools -y
 ```
 ## Assessment
 ### Assessment 1:
-```bash
-Verify connectivity using ping -c 4 <target_vm_ip>
-```
+- Verify connectivity using ping -c 4 <target_vm_ip>
+
 ### Assessment 2:
-Identify available shared directories using 
-```bash
-showmount -e <target_vm_ip>
-```
+- Identify available shared directories using 
+- showmount -e <target_vm_ip>
 ### Assessment 3:
-``` bash
-Create a mount point and mount the shared storage
-```
+- Create a mount point and mount the shared storage  
 ### Assessment 4:
-``` bash
-Verify the mount using df -h
-```
+- Verify the mount using df -h
 ### Assessment 5:
-```bash
-Access the shared storage and confirm files are visible
-```
+- Access the shared storage and confirm files are visible
 ### Assessment 6:
-```bash
-Create and verify a test file in the shared storage
-```
+- Create and verify a test file in the shared storage
 ### Assessment 7:
-```bash
-Verify file visibility from another VM
-```
+- Verify file visibility from another VM
 ### Assessment 8:
-```bash
-Unmount the storage and confirm it is removed
-```
+- Unmount the storage and confirm it is removed
 ### FAQs
 
 What is network-based storage?
-Network-based storage allows multiple systems to access shared data over a network instead of using local disks.
+- Network-based storage allows multiple systems to access shared data over a network instead of using local disks.
 
 What is NFS?
-NFS (Network File System) is a protocol that allows files to be shared between systems across a network.
+- NFS (Network File System) is a protocol that allows files to be shared between systems across a network.
 
 Why use storage pools?
-Storage pools centralize data, making it easier to manage, scale, and back up across multiple systems.
+- Storage pools centralize data, making it easier to manage, scale, and back up across multiple systems.
 
 Why do you need to mount storage?
-Mounting connects the remote storage to your local filesystem so you can interact with it like a normal directory.
+- Mounting connects the remote storage to your local filesystem so you can interact with it like a normal directory.
 
 Why is verifying across multiple VMs important?
-It confirms that the storage is truly shared and accessible between different systems on the network.
+- It confirms that the storage is truly shared and accessible between different systems on the network.
 
 ### Related Skills & Roles
-Cybersecurity Analyst
-Network Administrator
-Systems Engineer
-Cloud Engineer
+- Cybersecurity Analyst
+- Network Administrator
+- Systems Engineer
+- Cloud Engineer
