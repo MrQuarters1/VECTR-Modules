@@ -9,8 +9,7 @@ One common method of implementing this is through the Network File System (NFS),
 ## Step 1: Verify Network Connectivity 
 
 Before accessing shared storage, confirm that your VMs can communicate.  
-```bash
-Run:  
+```bash 
 ping -c 4 <target_vm_ip>  
 ```
 Did the ping work? (Yes/No)  
@@ -21,8 +20,7 @@ Did the ping work? (Yes/No)
 ## Step 2: Identify Available Network Storage  
 
 Check if a shared storage resource is available.  
-```bash
-Run:  
+```bash  
 showmount -e <target_vm_ip>  
 ```
 Do you see any shared directories? (Yes/No)  
@@ -34,8 +32,7 @@ Do you see any shared directories? (Yes/No)
 ## Step 3: Create a Mount Point  
 
 You need a directory to attach the network storage.  
-```bash 
-Run:  
+```bash   
 sudo mkdir -p /mnt/shared_storage  
 ```
 What directory did you create? /mnt/shared_storage  
@@ -48,7 +45,6 @@ What directory did you create? /mnt/shared_storage
 
 Connect to the shared storage pool.  
 ```bash
-Run:  
 sudo mount -t nfs <target_vm_ip>:/shared /mnt/shared_storage  
 ```
 Did the mount complete successfully? (Yes/No)  
@@ -60,8 +56,7 @@ Did the mount complete successfully? (Yes/No)
 ## Step 5: Verify Mounted Storage  
 
 Confirm the storage is mounted correctly.  
-```bash  
-Run:  
+```bash 
 df -h  
 ```  
 Do you see the mounted share listed? (Yes/No)  
@@ -74,8 +69,7 @@ Do you see the mounted share listed? (Yes/No)
 
 Navigate into the mounted directory.  
 ```bash
-Run:  
-cd /mnt/shared_storage  
+cd /mnt/shared_storage
 ls  
 ```  
 Do you see files in the shared storage? (Yes/No)  
@@ -88,8 +82,7 @@ Do you see files in the shared storage? (Yes/No)
 
 Test writing to the shared storage.  
 ```bash
-Run:  
-touch testfile.txt  
+touch testfile.txt
 ls
 ```
 Did your file appear? (Yes/No)  
@@ -101,8 +94,7 @@ Did your file appear? (Yes/No)
 ## Step 8: Verify from Another VM 
 
 Switch to another VM and check if the file exists.  
-```bash
-Run:  
+```bash 
 cd /mnt/shared_storage  
 ls  
 ```
@@ -115,8 +107,7 @@ Do you see the same file? (Yes/No)
 ## Step 9: Unmount Storage  
 
 Clean up by disconnecting the storage.  
-```bash
-Run:  
+```bash 
 sudo umount /mnt/shared_storage  
 ```
 Verify: 
