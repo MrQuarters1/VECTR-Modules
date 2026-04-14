@@ -14,7 +14,7 @@ nftables is the modern replacement for iptables in Linux systems. Instead of usi
 
 
 ## Step 1: View Current Ruleset
----
+
 Check if any rules already exist.
 ```bast
 Run:  
@@ -24,11 +24,10 @@ Is there an existing ruleset? (Yes/No)
 
 ### Reflection Question
 - Why is it important to check for an existing ruleset before making changes?
-
 - What could happen if you add new rules without knowing the current configuration?
 
 ## Step 2: Create a Table
----
+
 Tables are used to organize firewall rules.
 ```bash
 Run:  
@@ -40,11 +39,10 @@ What table did you create? filter
 
 ### Reflection Questions
 - How does organizing rules into tables help with firewall management?
-
 - Why might separating rules into different tables be useful in larger systems?
 
 ## Step 3: Create a Chain
----
+
 Chains control how packets are processed.
 ```bash
 Run:  
@@ -56,11 +54,10 @@ What is the default policy? drop
 
 ### Reflection Questions
 - Why is a default drop policy considered more secure?
-
 - What would be the risk of using a default accept policy instead?
 
 ## Step 4: Add Firewall Rules
----
+
 Now we will allow specific types of traffic.
 
 Allow loopback traffic:
@@ -79,11 +76,10 @@ How many rules did you add? 3
 
 ### Reflection Questions
 - What types of traffic did you allow and why are they necessary?
-
 - What would break if one of these rules was missing?
 
 ## Step 5: Review Ruleset
----
+
 Verify that everything was added correctly.
 ```bash
 Run:  
@@ -98,11 +94,10 @@ Do you see your rules listed? (Yes/No)
 
 ### Reflection Question
 - Why is verifying your ruleset important after making changes?
-
 - How can reviewing the ruleset help identify configuration errors?
 
 ## Step 6: Test Connectivity
----
+
 Now test if traffic is allowed.
 ```bash
 Run:  
@@ -112,11 +107,10 @@ Did the ping work? (Yes/No)
 
 ### Reflection Question
 - What does a successful ping tell you about your firewall rules?
-
 - What might it indicate if the ping fails unexpectedly?
 
 ## Step 7: Block Traffic (Optional Test)
----
+
 To see how blocking works, remove the ICMP rule.
 ```bash
 Run:  
@@ -130,11 +124,10 @@ Did the ping fail? (Yes/No)
 
 ### Reflection Question
 - Why did removing one rule stop the ping from working?
-
 - How does this demonstrate the importance of individual firewall rules?
 
 ## Step 8: Cleanup
----
+
 Remove the table to reset the environment.
 ```bash
 Run:  
@@ -148,7 +141,6 @@ Is the ruleset empty? (Yes/No)
 
 ### Reflection Question
 - Why is cleanup important after completing a lab?
-
 - What issues could occur if old firewall rules are left in place?
 
 
