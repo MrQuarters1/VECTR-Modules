@@ -9,7 +9,7 @@ Even though newer tools like nftables have been developed to simplify firewall m
 
 iptables is a legacy firewall tool used in Linux systems to control incoming and outgoing traffic. It works by defining rules that either allow or block packets based on things like IP address, protocol, or port. Even though newer tools like nftables exist, iptables is still widely used and important to understand.
 
----
+
 ## Step 1: View Current Rules
 Check the current iptables rules to see what is already configured.
 ```bash
