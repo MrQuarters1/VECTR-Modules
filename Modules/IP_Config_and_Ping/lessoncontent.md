@@ -33,7 +33,6 @@ Review the following values:
 - What is the default gateway?
 - How would a missing gateway affect connectivity?
 
----
 ## Step 2: Inspect Linux Network Configuration with ifconfig
 Open a terminal on the Kali VM and run:
 
@@ -52,7 +51,6 @@ Identify the active interface and review:
 - What is the IPv4 address on that interface?
 - What happens if the interface is down or configured with the wrong network?
 
----
 ## Step 3: Test Local Reachability with ping
 Use `ping` to confirm that the local network stack is working.
 
@@ -72,7 +70,6 @@ A successful result confirms that the local TCP/IP stack is functioning.
 - Why is `127.0.0.1` useful during troubleshooting?
 - What does it mean if localhost does not respond?
 
----
 ## Step 4: Test Connectivity to Another Host
 Now test connectivity to another host in the lab.
 
@@ -97,7 +94,6 @@ Use the results to identify:
 - Was there packet loss?
 - Could a failed ping be caused by firewall rules rather than the host being down?
 
----
 ## Step 5: Use the Tools Together
 Use the following order when troubleshooting a basic network problem:
 
@@ -111,7 +107,6 @@ Use the following order when troubleshooting a basic network problem:
 - Which command would you run first in a real troubleshooting scenario?
 - Why is it helpful to confirm local settings before testing a remote system?
 
----
 ## Challenge Task
 A host in the sandbox cannot reach an internal server.
 

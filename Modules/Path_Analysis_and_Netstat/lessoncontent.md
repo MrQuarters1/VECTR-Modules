@@ -31,7 +31,6 @@ Review:
 - What might repeated timeouts indicate?
 - How could segmentation affect the output?
 
----
 ## Step 2: Trace the Path on Windows with tracert
 Open **Command Prompt** or **PowerShell** on the Windows VM and run:
 
@@ -46,7 +45,6 @@ Compare the output to what you see in Linux.
 - At what point does the traffic appear to stop?
 - What might a failed path say about the gateway or router configuration?
 
----
 ## Step 3: Inspect Active Connections with netstat
 Now inspect the host for active connections and listening services.
 
@@ -71,7 +69,6 @@ Look for:
 - Is the expected service running?
 - Are there any connections you did not expect to see?
 
----
 ## Step 4: Use the Tools Together
 Use the following order when diagnosing a path or service issue:
 
@@ -85,7 +82,6 @@ Use the following order when diagnosing a path or service issue:
 - Why is it helpful to use both path analysis and port visibility?
 - Could the route be valid while the service is still unavailable?
 
----
 ## Challenge Task
 A service in the sandbox is unreachable from another host.
 

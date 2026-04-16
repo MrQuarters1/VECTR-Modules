@@ -27,7 +27,6 @@ Review:
 - What IP address was returned?
 - What would a failed lookup suggest?
 
----
 ## Step 2: Query a Hostname with dig
 On Kali, use `dig` for more detailed output.
 
@@ -46,7 +45,6 @@ Review:
 - What records appeared in the answer section?
 - How is this output different from `nslookup`?
 
----
 ## Step 3: Query a Specific DNS Server
 You can direct a query to a specific DNS server.
 
@@ -60,7 +58,6 @@ Compare the results with the default resolver.
 - Did the answer change when querying another DNS server?
 - What could different answers tell you about the environment?
 
----
 ## Step 4: Use the Tools Together
 Use the following order when diagnosing a DNS problem:
 
@@ -73,7 +70,6 @@ Use the following order when diagnosing a DNS problem:
 - Why is it helpful to compare DNS responses from different servers?
 - How can DNS issues look like general connectivity failures?
 
----
 ## Challenge Task
 A web application in the sandbox works by IP address but not by hostname.
 
