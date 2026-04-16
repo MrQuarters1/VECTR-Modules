@@ -22,6 +22,7 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install nfs-common -y
 RUN sudo apt-get install net-tools -y
 ```
+
 ## Assessment
 ### Assessment 1:
 - Verify connectivity using ping -c 4 <target_vm_ip>
@@ -29,20 +30,26 @@ RUN sudo apt-get install net-tools -y
 ### Assessment 2:
 - Identify available shared directories using 
 - showmount -e <target_vm_ip>
+
 ### Assessment 3:
 - Create a mount point and mount the shared storage  
+
 ### Assessment 4:
 - Verify the mount using df -h
+
 ### Assessment 5:
 - Access the shared storage and confirm files are visible
+
 ### Assessment 6:
 - Create and verify a test file in the shared storage
+
 ### Assessment 7:
 - Verify file visibility from another VM
+
 ### Assessment 8:
 - Unmount the storage and confirm it is removed
-### FAQs
 
+## FAQs
 What is network-based storage?
 - Network-based storage allows multiple systems to access shared data over a network instead of using local disks.
 

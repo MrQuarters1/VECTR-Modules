@@ -26,25 +26,30 @@ RUN sudo apt-get install net-tools -y
 
 ## Assessment
 ### Assessment 1:
-
 - iptables -L -v
-
 Identify default chains
+
 ### Assessment 2:
 - Set INPUT policy to DROP
 - Verify change
+
 ### Assessment 3:
 - Add rule to allow localhost traffic
+
 ### Assessment 4:
 - Add rule for established connections
 - Confirm connectivity still works
+
 ### Assessment 5:
 - Add and test ICMP rule
+
 ### Assessment 6:
 - Add a rule to block a specific IP
+
 ### Assessment 7:
 - Flush all rules and restore default policy
-### FAQs
+
+## FAQs
 What is iptables?
 - iptables is a Linux firewall tool used to control incoming and outgoing network traffic based on defined rules.
 

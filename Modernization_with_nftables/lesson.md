@@ -22,23 +22,30 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install nftables -y
 RUN sudo apt-get install net-tools -y
 ```
+
 ## Assessment
 ### Assessment 1:
 - View current ruleset using nft list ruleset
+
 ### Assessment 2:
 - Create a table and input chain with a default drop policy
+
 ### Assessment 3:
 - Add rules for loopback, established connections, and ICMP traffic
+
 ### Assessment 4:
 - Verify rules using nft list ruleset
+
 ### Assessment 5:
 - Test connectivity using ping
+
 ### Assessment 6:
 - Remove a rule and observe the effect on connectivity
+
 ### Assessment 7:
 - Delete the table and confirm the ruleset is cleared
-### FAQs
 
+## FAQs
 What is nftables?
 - nftables is the modern Linux firewall framework that replaces iptables and provides a unified way to manage filtering rules.
 
