@@ -7,6 +7,14 @@ The following Modules were created located in the Modules folder:
 - Reverse Proxy
 - Wireshark
 - Subnets
+- SSL/TLS
+- Firewall Management with Iptables
+- Modernization with Nftables
+- Network Based Storage pools
+- DNS Resolution
+- IPConfig and Ping
+- Path Analysis and Netstat
+
 
 NEST Team:
 - Saleh Hayati
