@@ -1,9 +1,10 @@
-| title   | SSL/TLS |
-|---------|---------|
-| id      | ssl-tls |
-| author  | Saleh Hayati |
-| date    | 2026-04-14 |
-| version | 1.0 |
+---
+title: "SSL/TLS"
+id: "ssl-tls"
+author: "Saleh Hayati"
+date: "2026-04-14"
+version: "1.0"
+---
 
 ## Learning Objectives
 - Understand the purpose of SSL/TLS in securing network communication.
@@ -17,14 +18,13 @@
 - Web browser
 
 ## Lab Environment Setup
-
 Kali Base:
-
+```bash
 RUN sudo apt-get update -y  
-RUN sudo apt-get install curl -y  
+RUN sudo apt-get install curl -y
+```  
 
 ## Assessment
-
 ### Assessment 1:
 - Use curl to connect to an HTTPS website
 - Observe the secure connection
